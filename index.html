@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro Espacio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Nuestro Espacio 🌟</h1>
+    <p>Un lugar para crecer juntos, personal y profesionalmente.</p>
+  </header>
+
+  <section id="biblioteca">
+    <h2>Biblioteca Digital</h2>
+    <form id="buscarLibroForm">
+      <input type="text" id="buscarLibroInput" placeholder="Buscar un libro...">
+      <button type="submit">Buscar</button>
+    </form>
+    <div id="resultadosLibros"></div>
+  </section>
+
+  <section id="peliculas">
+    <h2>Películas y Streaming</h2>
+    <form id="buscarPeliculaForm">
+      <input type="text" id="buscarPeliculaInput" placeholder="Buscar una película...">
+      <button type="submit">Buscar</button>
+    </form>
+    <div id="resultadosPeliculas"></div>
+  </section>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
