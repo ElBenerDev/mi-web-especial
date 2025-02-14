@@ -1,53 +1,194 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
+    line-height: 1.6;
   }
   
   header {
     background-color: #6200ea;
     color: white;
-    padding: 20px;
+    padding: 60px 20px;
     text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+  
+  header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    font-weight: 400;
   }
   
   section {
-    margin: 20px;
-    padding: 20px;
+    margin: 20px auto;
+    padding: 25px;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
   }
   
+  h2 {
+    color: #6200ea;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  /* Formularios */
   form {
     margin-bottom: 20px;
   }
   
-  input[type="text"] {
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  textarea, input[type="text"], input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
   }
   
   button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #6200ea;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
   }
   
   button:hover {
     background-color: #3700b3;
   }
   
-  .libro, .pelicula {
+  button i {
+    margin-right: 8px;
+  }
+  
+  /* Notas */
+  #listaNotas {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #listaNotas li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #6200ea;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    transition: transform 0.2s;
+  }
+  
+  #listaNotas li:hover {
+    transform: translateX(5px);
+  }
+  
+/* Estilos para el formulario de búsqueda */
+#buscarLibroForm {
+    display: flex;
+    gap: 10px;
     margin-bottom: 20px;
-    padding: 10px;
+  }
+  
+  #buscarLibroInput {
+    flex: 1;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-  } 
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  /* Estilos para los libros */
+  .libro {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .libro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .libro img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .libro h3 {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .libro p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Botón de cargar más */
+  .btn-cargar-mas {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-cargar-mas:hover {
+    background-color: #3700b3;
+  }
+  
+  /* Galería de Fotos */
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  
+  .galeria-grid img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .galeria-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Inspiración */
+  #fraseInspiradora {
+    font-style: italic;
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+  }

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuestro Espacio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -12,27 +14,47 @@
     <p>Un lugar para crecer juntos, personal y profesionalmente.</p>
   </header>
 
+  <!-- Sección de Notas -->
+  <section id="notas">
+    <h2>Notas y Recordatorios</h2>
+    <form id="notaForm">
+      <textarea id="notaInput" placeholder="Escribe una nota..."></textarea>
+      <button type="submit"><i class="fas fa-plus"></i> Agregar</button>
+    </form>
+    <ul id="listaNotas"></ul>
+  </section>
+
+  <!-- Sección de Biblioteca Digital -->
   <section id="biblioteca">
     <h2>Biblioteca Digital</h2>
     <form id="buscarLibroForm">
       <input type="text" id="buscarLibroInput" placeholder="Buscar un libro...">
-      <button type="submit">Buscar</button>
+      <button type="submit"><i class="fas fa-search"></i> Buscar</button>
     </form>
-    <div id="resultadosLibros"></div>
+    <div class="libros-grid" id="librosGrid">
+      <!-- Libros se cargarán aquí -->
+    </div>
+    <button id="cargarMas" class="btn-cargar-mas">Cargar más</button>
   </section>
 
-  <section id="peliculas">
-    <h2>Películas y Streaming</h2>
-    <form id="buscarPeliculaForm">
-      <input type="text" id="buscarPeliculaInput" placeholder="Buscar una película...">
-      <button type="submit">Buscar</button>
+  <!-- Sección de Galería de Fotos -->
+  <section id="galeria">
+    <h2>Galería de Fotos</h2>
+    <form id="fotoForm">
+      <input type="file" id="fotoInput" accept="image/*">
+      <button type="submit"><i class="fas fa-upload"></i> Subir Foto</button>
     </form>
-    <div id="resultadosPeliculas"></div>
+    <div class="galeria-grid" id="galeriaFotos"></div>
   </section>
 
-  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
-  <script src="firebase-config.js"></script>
-  <script src="script.js"></script>
+  <!-- Sección de Inspiración -->
+  <section id="inspiracion">
+    <h2>Inspiración del Día</h2>
+    <p id="fraseInspiradora">"La creatividad es la inteligencia divirtiéndose." – Albert Einstein</p>
+  </section>
+
+  <!-- Importa Firebase y la lógica de la aplicación -->
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
